@@ -74,7 +74,7 @@
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
@@ -556,7 +556,7 @@
   \vspace{-1.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{0.5\textwidth - 0.3cm}{@{\extracolsep{\fill}} m{1.1cm} L{0.5\textwidth - 2.9cm} R{1.5cm}}
+  \begin{tabular*}{0.5\textwidth - 0.3cm}{@{\extracolsep{\fill}} m{1.1cm} L{0.5\textwidth - 3.9cm} R{2.5cm}}
     \ifempty{#2#3}
       {#6 & \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {#6 & \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
