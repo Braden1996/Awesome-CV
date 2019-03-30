@@ -18,20 +18,20 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt, a4paper,twocolumn]{awesome-cv}
+
+\usepackage[super]{nth}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
 % Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-darknight
+\definecolor{custom}{HTML}{4285F4}
+\colorlet{awesome}{custom}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -39,9 +39,6 @@
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -51,54 +48,48 @@
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Claud D.}{Park}
-\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
-\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+\name{Braden}{Marshall}
+\position{Software Engineer{\enskip\cdotp\enskip}Full-stack Web Engineer}
+%\address{Computer Vision Center, Edificio O, Campus UAB 08193 Barcelona SPAIN}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
+\mobile{(+44) 7469 753230} 
+\email{braden1996@hotmail.co.uk}
+\homepage{bradenmarshall.co.uk}
+\github{Braden1996}
+\linkedin{braden-marshall}
+\location{London}
+% \stackoverflow{SOid}{SOname}
 % \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
+% \skype{skypeid}
 % \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
+\twocolumn[\begin{@twocolumnfalse}
 \makecvheader
+\end{@twocolumnfalse}]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
+  {SENT TO \emph{GitHub Repository}}
+  {\href{https://bradenmarshall.co.uk}{bradenmarshall.co.uk}}
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
-  {\thepage}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+\input{resume/summary.tex}
+\input{resume/1_experience.tex}
+\input{resume/2_education.tex}
+\input{resume/3_honors.tex}
+\input{resume/4_projects.tex}
+\input{resume/5_skills.tex}
 
 
 %-------------------------------------------------------------------------------
