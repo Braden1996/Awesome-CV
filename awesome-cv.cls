@@ -199,6 +199,7 @@
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
+\newcommand*{\minorsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -525,6 +526,16 @@
   \sectionstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
   \par\nobreak\addvspace{0.8ex}
+}
+
+% Define a section for CV
+% Usage: \cvminorsection{<section-title>}
+\newcommand{\cvminorsection}[1]{%
+  \par\addvspace{0.3ex}
+  \phantomsection{}
+  \minorsectionstyle{#1}
+  \color{gray}\vhrulefill{0.9pt}
+  \par\nobreak\addvspace{0.2ex}
 }
 
 % Define a subsection for CV
