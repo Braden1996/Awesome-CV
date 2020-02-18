@@ -53,8 +53,7 @@
 % Needed to handle text alignment
 \RequirePackage{ragged2e}
 % Needed to configure page layout
-\RequirePackage[left=1.4cm, top=0.8cm, right=1.4cm, bottom=2.2cm, footskip=.5cm,twocolumn,columnsep=0.6cm]{geometry}
-%\RequirePackage{geometry}
+\RequirePackage{geometry}
 % Needed to make header & footer effeciently
 \RequirePackage{fancyhdr}
 % Needed to manage colors
@@ -106,7 +105,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-%\geometry{left=2.0cm, top=1.4cm, right=2.0cm, bottom=1.9cm, footskip=.5cm}
+\geometry{left=2.0cm, top=1.4cm, right=2.0cm, bottom=1.9cm, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -164,9 +163,10 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+\setfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
+
+\setfontfamily\headerfont[
   Path=\@fontdir,
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
@@ -556,7 +556,7 @@
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
-  \vspace{-5.0mm}
+  \vspace{-2.0mm}
   \begin{center}
 }{%
   \end{center}
@@ -668,13 +668,13 @@
 % Usage: \cvproject{<name>}{<description>}
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cvproject}[2]{%
-  \vspace{-2mm}
+  \vspace{-3mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   %\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \entrytitlestyle{#1}: \descriptionstyle{#2} \\
   %\end{tabular*}
-  \vspace{-1mm}
+  \vspace{-2mm}
 }
 
 % Define an environment for cvskill
